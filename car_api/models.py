@@ -28,3 +28,7 @@ class Car(models.Model):
     manufacturing_date = models.DateField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    @property
+    def manufacturer(self):
+        return self.car_model.manufacturer.name

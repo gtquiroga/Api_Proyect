@@ -8,7 +8,8 @@ class CarSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Car
-        fields = ['manufacturing_date']
+        fields = ['manufacturing_date', "manufacturer"]
+        read_only_fields: ["manufacturer"]
        
 
 class CarModelSerializer(serializers.ModelSerializer):
